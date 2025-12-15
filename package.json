@@ -9,11 +9,14 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch index.js",
     "build:ui": "rm -rf dist && cd ../phonebook && npm run build && cp -r dist ../phonebook-backend",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^5.2.1"
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.0.1"
   }
 }
